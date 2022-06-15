@@ -1,6 +1,6 @@
-env/
+# Environment
 venv/
 .env/
-.envrc
 
+# Vs Code
 .vscode/
