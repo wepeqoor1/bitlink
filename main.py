@@ -3,8 +3,6 @@ import requests
 import json
 import os
 
-from custom_exception import 
-
 
 def get_short_link(headers: json, long_url: str) -> str:
     """Convert long link to short link"""
