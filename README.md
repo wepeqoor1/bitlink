@@ -1,5 +1,5 @@
 # Bitly url shorterer
-Generate short link(Bitlink) from URL and gives total clicks from Bitlink
+Generate short link(Bitlink) from URL and gives total clicks from Bitlink.
 ***
 
 ## How to install
@@ -12,10 +12,10 @@ $ pip install -r requirements.txt
 Sign up for Bitly via email instead of social media. This will make it easier to get the token.
 
 ### Get `API_KEY` https://app.bitly.com/settings/integrations/. 
-Need token "GENERIC ACCESS TOKEN"
+Need token "GENERIC ACCESS TOKEN".
 
 ### Environment variables
-Create a file`.env` in the root directory of the project and add API_TOKEN=<`API_KEY`>
+Create a file`.env` in the root directory of the project and add API_TOKEN=<`API_KEY`>.
 
 ### Start script
 ```bash
