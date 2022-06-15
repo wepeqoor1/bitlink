@@ -1,7 +1,14 @@
 from urllib.parse import ParseResult, urlparse
+from dotenv import load_dotenv
 import requests
+
 import json
 import os
+
+
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+if os.path.exists(dotenv_path):
+    load_dotenv(dotenv_path)
 
 
 def get_short_link(headers: json, long_url: str) -> str:
