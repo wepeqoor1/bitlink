@@ -43,9 +43,7 @@ def is_bitlink(headers: json, bitlink: str,) -> bool:
 def cut_protochol_from_url(url: str) -> str:
     """Cut protochol from URL"""
     parsed_url: ParseResult = urlparse(url)
-    link: str = ''.join([parsed_url.hostname, parsed_url.path])
-
-    return link
+    return ''.join([parsed_url.hostname, parsed_url.path])
 
 
 if __name__=='__main__':
