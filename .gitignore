@@ -1,6 +1,9 @@
-env/
+# Environment
 venv/
 .env/
-.envrc
 
+# Environment variables
+.env
+
+# Vs Code
 .vscode/
