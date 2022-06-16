@@ -17,7 +17,7 @@ Sign up for Bitly via email instead of social media. This will make it easier to
 Need token "GENERIC ACCESS TOKEN".
 
 ### Environment variables
-Create a file `.env` in the root directory of the project and add API_TOKEN=<`API_KEY`>.
+Put API_TOKEN=<`API_KEY`> in `.env` file.
 
 ### Start script
 ```bash
