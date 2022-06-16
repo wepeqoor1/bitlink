@@ -7,6 +7,8 @@ Python3 should be already installed. Then use pip (or pip3, if there is a confli
 ```bash
 $ pip install -r requirements.txt
 ```
+***
+
 ## How to use
 ### Register on Bitly service https://bitly.com/
 Sign up for Bitly via email instead of social media. This will make it easier to get the token.
@@ -15,7 +17,7 @@ Sign up for Bitly via email instead of social media. This will make it easier to
 Need token "GENERIC ACCESS TOKEN".
 
 ### Environment variables
-Create a file`.env` in the root directory of the project and add API_TOKEN=<`API_KEY`>.
+Create a file `.env` in the root directory of the project and add API_TOKEN=<`API_KEY`>.
 
 ### Start script
 ```bash
