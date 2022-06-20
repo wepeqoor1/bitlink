@@ -58,7 +58,7 @@ def cut_protocol_from_url(url: str) -> str:
 if __name__=='__main__':
 
     headers: json = {
-        "Authorization": f"Bearer {os.environ.get('API_TOKEN')}"
+        "Authorization": f"Bearer {os.environ.get('BITLINK_API_TOKEN')}"
     }
 
     link: str = input('Введите ссылку или Битлинк: ')
