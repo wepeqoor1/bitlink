@@ -6,11 +6,6 @@ import json
 import os
 
 
-dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
-if os.path.exists(dotenv_path):
-    load_dotenv(dotenv_path)
-
-
 def get_short_link(headers: json, long_url: str) -> str:
     """Convert long link to short link"""
 
@@ -56,6 +51,11 @@ def cut_protocol_from_url(url: str) -> str:
 
 
 if __name__=='__main__':
+    
+    """Load environment variables"""
+    dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+    if os.path.exists(dotenv_path):
+        load_dotenv(dotenv_path)
 
     headers: json = {
         "Authorization": f"Bearer {os.environ.get('BITLINK_API_TOKEN')}"
