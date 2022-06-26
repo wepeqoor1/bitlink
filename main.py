@@ -29,7 +29,7 @@ def total_clicks(headers: json, bitlink: str) -> str:
     response: requests.Response = requests.get(url, headers=headers)
     response.raise_for_status()
 
-    return response.json()['total_clicks']
+    return f"Количество переходов по ссылке битли: {response.json()['total_clicks']}"
 
 
 def is_bitlink(headers: json, bitlink: str) -> bool:
