@@ -2,6 +2,7 @@ from urllib.parse import ParseResult, urlparse
 from dotenv import load_dotenv
 import requests
 
+import argparse
 import json
 import os
 
@@ -51,7 +52,18 @@ def cut_protocol_from_url(url: str) -> str:
 
 
 if __name__=='__main__':
-    
+
+    parser = argparse.ArgumentParser(
+        description=(
+            """
+            Программа принимает на вход ссылки и генерирует коротки (Битлинк) ссылки.
+            Так же считает количество переходов по коротким ссылкам.
+            """)
+        )
+    parser.add_argument('link', help='Введите ссылку или битлинк')
+    args = parser.parse_args()
+    link: str = args.link
+
     """Load environment variables"""
     dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
     if os.path.exists(dotenv_path):
@@ -60,8 +72,6 @@ if __name__=='__main__':
     headers: json = {
         "Authorization": f"Bearer {os.environ.get('BITLINK_API_TOKEN')}"
     }
-
-    link: str = input('Введите ссылку или Битлинк: ')
 
     try:
         is_bitlink: bool = is_bitlink(bitlink=link, headers=headers)
@@ -72,5 +82,7 @@ if __name__=='__main__':
         )
     except requests.exceptions.HTTPError:
         print('Не корректный запрос')
+    except TypeError:
+        print('Введите ссылку или Битлик')
     else:
         print(response)

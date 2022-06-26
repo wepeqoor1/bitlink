@@ -21,6 +21,9 @@ Create `.env` file and paste BITLINK_API_TOKEN=<`API_KEY`>.
 
 ### Start script
 ```bash
-$ python3 main.py
+$ python3 main.py <argument>
 ```
-Next, you can enter a `URL` or `Bitlink`.
+### optional arguments:
+`-h` - Program information
+### Positional arguments
+`link` - Enter URL or Bitlink 
